@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Начало работы - stereo_vision docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u041d\u0430\u0447\u0430\u043b\u043e \u0440\u0430\u0431\u043e\u0442\u044b";
+        var mkdocs_page_input_path = "getting_started.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> stereo_vision docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../home/">Stereo vision</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Начало работы</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">Создание стереокамеры</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">Что вам понадобится?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">Установка</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">Подготовка шахматной доски</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_6">Подключение к компьютеру</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">Сборка изображений для калибровки</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../calibration/">Калибровка</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../disparity/">Диспаратность</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../reconstruction/">3д-реконструкция</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">stereo_vision docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Начало работы</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">Начало работы</h1>
+<h2 id="_2">Создание стереокамеры</h2>
+<h3 id="_3">Что вам понадобится?</h3>
+<p>Самое главное - удерживать камеры в одинаковом положении при съемке.
+Мною использовались две одинаковые камеры <strong>Logitech C270</strong>, но это вовсе необязательно.</p>
+<p>Также вам нужна какая-нибудь <strong>жесткая, плоская поверхность</strong>.</p>
+<h3 id="_4">Установка</h3>
+<p><small>процесс создания стереокамеры необязательно должен быть таким, как описано ниже.</small></p>
+<p>Для примера, за поверхность возьмем деревянную доску.
+Нам нужно, чтобы камеры не двигались, поэтому не будет лишним их приклеить.</p>
+<p><img alt="клей" src="../assets/glue.jpg" /></p>
+<p>Для большей уверенности можно замотать их с двух сторон скотчем.</p>
+<p><img alt="замотанные" src="../assets/taped.jpg" /></p>
+<h3 id="_5">Подготовка шахматной доски</h3>
+<p>Для калибровки камер по шаблону мною используется шахматная доска.
+Вы можете распечатать ее на бумажном листе и также приклеить на какую-нибудь <strong>жесткую и плоскую поверхность</strong></p>
+<p><img alt="доска" src="../assets/9x6.png" /></p>
+<h3 id="_6">Подключение к компьютеру</h3>
+<p>После подключения камер к компьютеру вся установка должна выглядеть как-то так:
+<img alt="установка" src="../assets/setup.jpg" />
+<small>все изображения выше взяты с <a href="https://erget.wordpress.com/2014/02/01/calibrating-a-stereo-camera-with-opencv/">этой</a> статьи.</small></p>
+<p>Чтобы вывести изображения с камер вы можете запустить скрипт <code>0_show_cameras.py</code>.
+В аргументы командной строки необходимо передать индексы камер.
+Чаще всего, если к вашему компьютеру не было подключено камер, нужными индексами будут <code>0</code> и <code>1</code>.
+Если же вы используете ноутбук со встроенной камерой, то можете попробовать <code>1</code> и <code>2</code>.</p>
+<p>Запустим скрипт</p>
+<pre><code class="language-bash">python 0_show_cameras.py 1 2
+</code></pre>
+<p>Для каждого скрипта вы можете использовать аргумент <code>--help</code>:</p>
+<pre><code class="language-bash">&gt;&gt;&gt; python 0_show_cameras.py --help
+
+usage: 0_show_cameras.py [-h] cams cams
+
+Этот скрипт предназначен для показа видеопотока с камер
+
+positional arguments:
+  cams        Индексы камер
+
+options:
+  -h, --help  show this help message and exit
+</code></pre>
+<h2 id="_7">Сборка изображений для калибровки</h2>
+<p>Для сборки изображений с шаблоном используется скрипт <code>1_capture_chessboard.py</code>.
+Кадры с камер записываются каждые 5 секунд. перед первым захватом также проходит 5 секунд.</p>
+<pre><code class="language-bash">python 1_capture_chessboard.py 1 2 30 dataset 9 6  
+</code></pre>
+<p>Разберем каждый параметр:</p>
+<p><code>1 2</code> - индексы камер</p>
+<p><code>30</code> - количество снимков</p>
+<p><code>dataset</code> - папка, в которую записываются кадры</p>
+<p><code>9 6</code> размер нашей доски (9x6 углов)</p>
+<p>Перед съемкой рекомендуется настроить освещение.
+При съемке не стоит резко трясти шаблоном.
+Используйте разные наклоны и перемещайте доску по видимой области двух камер.</p>
+<p><img alt="пример" src="../assets/chessboard_left.png" /></p>
+<pre><code class="language-bash">usage: 1_capture_chessboard.py [-h] cams cams amount output rows columns
+
+Этот скрипт предназначен для захвата шахматной доски. Захват шахматной доски необходим для калибровки по шаблону. Рекомендуется    
+сделать как минимум 30 снимков.
+
+positional arguments:
+  cams        Индексы камер
+  amount      Количество снимков
+  output      Папка, в которую сохраняются кадры
+  rows        Количество внутренних углов в строках шахматной доски.
+  columns     Количество внутренних углов в столбцах шахматной доски.
+
+options:
+  -h, --help  show this help message and exit
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../home/" class="btn btn-neutral float-left" title="Stereo vision"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../calibration/" class="btn btn-neutral float-right" title="Калибровка">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../home/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../calibration/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
