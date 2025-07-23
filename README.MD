@@ -22,4 +22,4 @@ pip install -r requirements.txt
     3_calibrate_cameras.py          # Скрипт для калибровки камер
     4_save_disparity.py             # Скрипт для построения карты диспаратности
     5_stereo_reconstruction.py      # Скрипт для 3д реконструкции
-    sgbm_config.yml                  # Файл конфигурации SGBM алгоритма
+    sgbm_config.yml                 # Файл конфигурации SGBM алгоритма
