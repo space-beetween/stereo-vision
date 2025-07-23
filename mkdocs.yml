@@ -1,6 +1,6 @@
 site_name: stereo_vision docs
 nav:
-    - Stereo vision: home.md
+    - Stereo vision: index.md
     - Начало работы: getting_started.md
     - Калибровка: calibration.md
     - Диспаратность: disparity.md
