@@ -1,0 +1,15 @@
+site_name: stereo_vision docs
+nav:
+    - Stereo vision: home.md
+    - Начало работы: getting_started.md
+    - Калибровка: calibration.md
+    - Диспаратность: disparity.md
+    - 3д-реконструкция: reconstruction.md
+theme:
+  name: readthedocs
+plugins:
+  - search
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+markdown_extensions:
+  - mdx_math
