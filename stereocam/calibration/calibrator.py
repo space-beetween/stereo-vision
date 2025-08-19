@@ -37,7 +37,6 @@ class StereoCalibrator:
 
         pattern_points = np.zeros((np.prod(self.pattern_size), 3), np.float32)
         pattern_points[:, :2] = np.indices(self.pattern_size).T.reshape(-1, 2)
-        print(len(dataset))
         self.pattern_points = [pattern_points] * len(dataset)
 
     def find_corners(
