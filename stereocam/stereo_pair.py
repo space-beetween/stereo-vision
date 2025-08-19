@@ -117,8 +117,9 @@ class StereoPair:
             print("Поиск доски...")
             frames = self.get_frames()
             for idx, frame in enumerate(frames):
+                gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
                 found[idx], chessboard_corners[idx] = cv2.findChessboardCorners(
-                    frame,
+                    gray,
                     (columns, rows),
                     flags=cv2.CALIB_CB_FAST_CHECK
                 )
